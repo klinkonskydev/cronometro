@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+*
+{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    HTML, body
+    {
+        height: 100vh;
+
+        display: grid;
+        grid-template-areas: 
+        "heade heade"
+        "main main"
+        "foote foote";
+
+        grid-template-rows: 60px 1fr 60px;
+
+        background: #fff url("./svg/pexels-olga-lioncat-7245264.jpg") no-repeat center center/cover; 
+
+        header
+        {
+            grid-area: heade;
+            
+            text-align: center;
+
+            padding: 10px;
+
+            .title
+            {
+                font: bold 27px 'Rajdhani', sans-serif;
+            }
+        }
+        
+        main
+        {
+            grid-area: main;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .container, .btns
+            {
+                display: flex;
+            }
+
+            .btn
+            {
+                width: 6rem;
+                height: 2rem;
+
+                margin: 10px 0 0 10px;
+
+                border: 1px solid black;
+                outline: none;
+
+                background: none;
+
+                font: 300 17px 'Rajdhani', sans-serif;
+            }
+
+            .btn:hover
+            {
+                animation: hoverColor 9s ease-in-out infinite;
+                background: orange;
+            }
+            
+            .timer
+            {
+                font: 100 27px 'Rajdhani', sans-serif;
+            }
+
+        }
+        
+        footer
+        {
+            grid-area: foote;
+
+            display: grid;
+            place-items: center;
+
+            p
+            {
+                font: 800 20px 'Rajdhani', sans-serif;
+                color: white;
+                text-shadow: 0 0 5px black;
+
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+/*
+============RESPONSIBLE============
+*/
+
+
+@keyframes hoverColor {
+    20% 
+    { 
+        background: none;
+    }
+
+    40%
+    {
+        background: #fff;
+    }
+
+    60%
+    {
+        background: orange;
+    }
+
+    80%
+    {
+        background: #fff;
+    }
+
+    100%
+    {
+        background: none;
+    }
+}
